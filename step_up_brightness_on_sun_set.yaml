@@ -1,0 +1,28 @@
+alias: "Smart Floor Lamp: Sunset Step Up"
+description: "Raise brightness from 0% to 100% in 20 minnutes."
+trigger:
+  - platform: sun
+    event: sunset
+    offset: "-00:20:00"
+action:
+  - service: select.select_option
+    target:
+      entity_id: select.smart_floor_lamp_mode
+    data:
+      option: "Static Color"
+  - service: light.turn_on
+    target:
+      entity_id: light.smart_floor_lamp_switch
+    data:
+      brightness_pct: 1
+      rgb_color: [255, 167, 86]
+
+  - repeat:
+      count: 99
+      sequence:
+        - delay: "00:00:12"
+        - service: light.turn_on
+          target:
+            entity_id: light.smart_floor_lamp_switch
+          data:
+            brightness_step_pct: 1
