@@ -27,9 +27,9 @@ const char* standBy = "Stand By";
 CRGB leds[NUM_LEDS];
 CRGB savedColor = CRGB::White;
 
-const char* mqtt_server = "192.168.1.0";
-const char* mqtt_user = "mqtt_user_name";
-const char* mqtt_pass = "mqtt_user_pass";
+const char* mqtt_server = "192.168.1.0"; // Change this
+const char* mqtt_user = "mqtt_user_name"; // Change this
+const char* mqtt_pass = "mqtt_user_pass"; // Change this
 const char* discovery_topic = "homeassistant/light/smart_floor_lamp/config";
 const char* state_topic = "homeassistant/light/smart_floor_lamp/state";
 const char* select_state_topic = "homeassistant/select/smart_floor_lamp/state";
