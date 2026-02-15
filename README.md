@@ -44,6 +44,15 @@ This project transforms a standard analog RGB LED strip into a fully automated s
 
 ---
 
+## 🔌 Circuit & Wiring
+
+Here is the physical wiring and component layout for the project:
+
+![NodeMCU Smart Lamp Circuit](images/circuit.jpg)
+*Note: Ensure common ground between the 12V LED power supply and the NodeMCU.*
+
+---
+
 ## 📝 Detailed Journey & Build Log
 
 For a deep dive into the hardware challenges (like fixing LCD "Zebra Strips"), software logic, and advanced Home Assistant automation YAMLs, check out the full blog post:
